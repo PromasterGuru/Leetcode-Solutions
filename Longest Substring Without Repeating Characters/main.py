@@ -8,7 +8,7 @@ class Solution(object):
                 while temp[l] != s[i]:
                     l+=1
                 temp = temp[l+1:]
-            temp += s[i]
+        temp += s[i]            
             l = 0
             if len(temp) > maxs:
                 maxs = len(temp)

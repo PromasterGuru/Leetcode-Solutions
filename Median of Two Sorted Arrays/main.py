@@ -1,21 +1,21 @@
 class Solution(object):
-    def findMedianSortedArrays(self, nums1, nums2):
-        r = 0
-        l = 0
-        arr = []
-        while r < len(nums1) and l < len(nums2):
-            if nums1[r] < nums2[l]:
-                arr.append(nums1[r])
-                r += 1
-            else:
-                arr.append(nums2[l])
-                l += 1
-        arr += nums1[r:] + nums2[l:]
-        if len(arr) % 2 == 0:
-            return (arr[len(arr)//2-1] + arr[len(arr)//2])/2
-        else:
-            return (arr[(len(arr)+1)//2-1])
-        return arr
+def findMedianSortedArrays(self, nums1, nums2):
+r = 0
+l = 0
+arr = []
+while r < len(nums1) and l < len(nums2):
+if nums1[r] < nums2[l]:
+arr.append(nums1[r])
+r += 1
+else:
+arr.append(nums2[l])
+l += 1
+arr += nums1[r:] + nums2[l:]
+if len(arr) % 2 == 0:
+return (arr[len(arr)//2-1] + arr[len(arr)//2])/2
+else:
+return (arr[(len(arr)+1)//2-1])
+return arr
 
 
 if __name__ == "__main__":
