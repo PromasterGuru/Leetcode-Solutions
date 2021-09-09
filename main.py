@@ -52,20 +52,40 @@
 #         return markdown
 
 # print(solution("    ##### Header Header Header"))
-def getDivision(n):
-    s = str(n)
-    if n < 100 and int(s[0]) * int(s[1])> 70:
-        return n >= 89
-    return int(s[:-1]) >= 89 or int(s[1:]) >= 89
+# def getDivision(n):
+#     s = str(n)
+#     if n < 100 and int(s[0]) * int(s[1])> 70:
+#         return n >= 89
+#     return int(s[:-1]) >= 89 or int(s[1:]) >= 89
 
-def solution(l, arr):
-    ar = []
-    for i in range(len(arr)):
-        if(getDivision(arr[i])):
-            ar.append("Yes")
-        else:
-            ar.append("No")
-    return ar    
+# def solution(l, arr):
+#     ar = []
+#     for i in range(len(arr)):
+#         if(getDivision(arr[i])):
+#             ar.append("Yes")
+#         else:
+#             ar.append("No")
+#     return ar    
 
-if __name__ == '__main__':
-    print(solution(2, [256, 991, 89, 777]))
+# if __name__ == '__main__':
+#     print(solution(2, [256, 991, 89, 777]))
+
+def fibonaci(n):
+    # arr = [0,1]
+    # i = 2
+    # if n < 0:
+    #     return -1
+    
+    # while i <= n:
+    #     arr.append(arr[-1] + arr[-2])
+    #     i += 1
+    # return arr[n]
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    print(n, end=" ")
+    return (fibonaci(n-1)) + fibonaci(n-2)
+
+if __name__ == "__main__":
+    print(fibonaci(20))
