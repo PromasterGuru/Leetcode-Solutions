@@ -34,3 +34,5 @@ if __name__ == '__main__':
     # s = "ruu" 
     # shifts = [26,9,1]
     print(shiftingLetters(s, shifts))
+    
+    
